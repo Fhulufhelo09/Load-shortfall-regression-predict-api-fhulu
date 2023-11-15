@@ -43,7 +43,9 @@ def _preprocess_data(data):
     -------
     Pandas DataFrame : <class 'pandas.core.frame.DataFrame'>
         The preprocessed data, ready to be used our model for prediction.
+
     """
+    
     # Convert the json string to a python dictionary object
     feature_vector_dict = json.loads(data)
     # Load the dictionary as a Pandas DataFrame.
@@ -58,7 +60,46 @@ def _preprocess_data(data):
     # ---------------------------------------------------------------
 
     # ----------- Replace this code with your own preprocessing steps --------
-    predict_vector = feature_vector_df[['Madrid_wind_speed','Bilbao_rain_1h','Valencia_wind_speed']]
+    predict_vector = feature_vector_df[['Madrid_wind_speed', 
+        'Valencia_wind_deg', 
+        'Seville_humidity', 
+        'Madrid_humidity',
+        'Valencia_humidity',
+        'Barcelona_wind_deg',
+        'Bilbao_wind_deg',  
+        'Bilbao_clouds_all',
+        'Seville_clouds_all',
+         'Madrid_clouds_all', 
+                                  
+        'Bilbao_wind_speed',                
+        'Valencia_wind_speed',
+    'Barcelona_wind_speed',
+     'Seville_wind_speed',
+     
+        'Bilbao_snow_3h',
+        'Valencia_snow_3h',                         
+                          'Barcelona_rain_1h',
+                          'Seville_rain_1h',
+                          'Bilbao_rain_1h',
+                          'Madrid_rain_1h',
+                          
+        'Seville_rain_3h', 
+      'Barcelona_rain_3h',
+                                  
+      
+      'Seville_pressure', 
+        'Bilbao_pressure',
+        'Barcelona_pressure' ,                 
+       'Valencia_pressure',  
+        'Madrid_pressure',
+                                  
+        'Valencia_temp', 
+     'Seville_temp', 
+      'Barcelona_temp',
+      'Bilbao_temp', 
+      'Madrid_temp', 
+                         
+       ]]
     # ------------------------------------------------------------------------
 
     return predict_vector
