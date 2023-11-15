@@ -45,7 +45,7 @@ def _preprocess_data(data):
         The preprocessed data, ready to be used our model for prediction.
 
     """
-    
+
     # Convert the json string to a python dictionary object
     feature_vector_dict = json.loads(data)
     # Load the dictionary as a Pandas DataFrame.
@@ -61,7 +61,7 @@ def _preprocess_data(data):
 
     # ----------- Replace this code with your own preprocessing steps --------
     predict_vector = feature_vector_df[['Madrid_wind_speed', 
-        'Valencia_wind_deg', 
+        #'Valencia_wind_deg', 
         'Seville_humidity', 
         'Madrid_humidity',
         'Valencia_humidity',
@@ -86,8 +86,11 @@ def _preprocess_data(data):
         'Seville_rain_3h', 
       'Barcelona_rain_3h',
                                   
-      
-      'Seville_pressure', 
+       # 'Madrid_weather_id',
+       #'Barcelona_weather_id',
+       #  'Bilbao_weather_id',
+        #'Seville_weather_id',
+      #'Seville_pressure', 
         'Bilbao_pressure',
         'Barcelona_pressure' ,                 
        'Valencia_pressure',  
@@ -98,7 +101,21 @@ def _preprocess_data(data):
       'Barcelona_temp',
       'Bilbao_temp', 
       'Madrid_temp', 
-                         
+                          #'Valencia_temp_min',
+                           #'Bilbao_temp_min',
+                          #'Barcelona_temp_min',
+                          #'Seville_temp_min', 
+                          #'Madrid_temp_min',
+                          
+                          # 'Bilbao_temp_max',
+                          #'Barcelona_temp_max',
+                          #'Madrid_temp_max',
+                          # 'Valencia_temp_max',
+                          #'Seville_temp_max',
+       # 'Avg_Temp_madrid', 'Avg_Temp_barcelona',
+       #'Avg_Temp_bilbao', 'Avg_Temp_valencia', 'Avg_Temp_seville',
+       #'Range_Temp_seville', 'Range_Temp_valencia', 'Range_Temp_barcelona',
+       #'Range_Temp_madrid', 'Range_Temp_bilbao'
        ]]
     # ------------------------------------------------------------------------
 
